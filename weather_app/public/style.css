@@ -1,0 +1,208 @@
+/* animated gradient background */
+
+body{
+
+background:linear-gradient(-45deg,#1e3c72,#2a5298,#0f2027,#203a43);
+
+background-size:400% 400%;
+
+animation:gradient 12s ease infinite;
+
+font-family:Segoe UI;
+
+color:white;
+
+}
+
+@keyframes gradient{
+
+0%{background-position:0% 50%}
+
+50%{background-position:100% 50%}
+
+100%{background-position:0% 50%}
+
+}
+
+
+/* navbar */
+
+.glass-nav{
+
+background:rgba(0,0,0,0.3);
+
+backdrop-filter:blur(10px);
+
+}
+
+
+/* hero */
+
+.hero{
+
+padding:60px 0;
+
+}
+
+
+/* search card */
+
+.search-card{
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(12px);
+
+border:none;
+
+transition:0.4s;
+
+}
+
+.search-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+/* input */
+
+.search-input{
+
+border-radius:30px;
+
+padding:12px;
+
+}
+
+
+/* suggestions */
+
+#suggestions{
+
+position:absolute;
+
+width:100%;
+
+background:white;
+
+color:black;
+
+border-radius:10px;
+
+z-index:10;
+
+}
+
+.suggestion{
+
+padding:10px;
+
+cursor:pointer;
+
+}
+
+.suggestion:hover{
+
+background:#eee;
+
+}
+
+
+/* weather card */
+
+.weather-card{
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+
+transition:0.4s;
+
+}
+
+.weather-card:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* icon animation */
+
+.weather-icon{
+
+font-size:60px;
+
+animation:float 3s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-8px)}
+
+100%{transform:translateY(0)}
+
+}
+
+
+/* forecast cards */
+
+.forecast-card{
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.2);
+
+transition:0.3s;
+
+}
+
+.forecast-card:hover{
+
+transform:scale(1.1);
+
+}
+
+
+/* chart */
+
+.chart-card{
+
+background:rgba(255,255,255,0.15);
+
+border-radius:20px;
+
+}
+
+
+/* footer */
+
+.footer{
+
+background:rgba(0,0,0,0.5);
+
+padding:20px;
+
+margin-top:40px;
+
+}
+
+
+/* dark mode */
+
+body.light{
+
+background:#f4f4f4;
+
+color:black;
+
+}
