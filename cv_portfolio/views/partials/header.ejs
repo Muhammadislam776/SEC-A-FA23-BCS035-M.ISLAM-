@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><%= title %></title>
+
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="profile-area">
+
+<img src="/images/profile.jpg" class="profile-img">
+
+<h4 class="profile-name">Muhammad Islam</h4>
+
+<p class="profile-role">
+Machine Learning Engineer<br>
+& Web Developer
+</p>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="sidebar-menu">
+
+<a href="/" class="menu-item <%= page==='home'?'active':'' %>">
+
+<i class="bi bi-house"></i>
+<span>Home</span>
+
+</a>
+
+<a href="/about" class="menu-item <%= page==='about'?'active':'' %>">
+
+<i class="bi bi-person"></i>
+<span>About</span>
+
+</a>
+
+<a href="/experience" class="menu-item <%= page==='experience'?'active':'' %>">
+
+<i class="bi bi-briefcase"></i>
+<span>Work</span>
+
+</a>
+
+<a href="/projects" class="menu-item <%= page==='projects'?'active':'' %>">
+
+<i class="bi bi-journal-text"></i>
+<span>Insights</span>
+
+</a>
+
+<a href="/contact" class="menu-item <%= page==='contact'?'active':'' %>">
+
+<i class="bi bi-envelope"></i>
+<span>Contact</span>
+
+</a>
+
+</div>
+
+
+<!-- SOCIAL -->
+
+<div class="sidebar-social">
+
+<a href="#"><i class="bi bi-github"></i></a>
+<a href="#"><i class="bi bi-youtube"></i></a>
+<a href="#"><i class="bi bi-linkedin"></i></a>
+<a href="#"><i class="bi bi-instagram"></i></a>
+
+</div>
+
+</div>
+
+
+<!-- MAIN CONTENT START -->
+
+<div class="content-area">
