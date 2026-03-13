@@ -1,7 +1,12 @@
 const elements=document.querySelectorAll(
 ".skill-card,.service-card,.project-card"
 );
+const toggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
 
+toggle.addEventListener("click", () => {
+sidebar.classList.toggle("show");
+});
 const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
