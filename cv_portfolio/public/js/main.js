@@ -60,3 +60,68 @@ item.style.display = "none";
 });
 
 });
+// Smooth scrolling for sidebar links
+document.querySelectorAll('.menu-item').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if(target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = link.getAttribute('href'); // navigate if different page
+    }
+  });
+});
+
+// Highlight active menu item on scroll
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  let scrollPos = window.scrollY || window.pageYOffset;
+
+  sections.forEach(section => {
+    const offsetTop = section.offsetTop - 60; // adjust offset for sidebar
+    const offsetBottom = offsetTop + section.offsetHeight;
+    const menuItem = document.querySelector(`.menu-item[href="#${section.id}"]`);
+    if(menuItem) {
+      if(scrollPos >= offsetTop && scrollPos < offsetBottom) {
+        document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
+        menuItem.classList.add('active');
+      }
+    }
+  });
+});
+
+// Hero typing text effect
+  // TYPING ANIMATION
+  const typingText = document.querySelector(".typing-text");
+  if (typingText) {
+    const texts = ["Full Stack Developer", "Web Developer", "Node.js Expert"];
+    let count = 0, index = 0, currentText = "", letter = "";
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      typingText.textContent = letter;
+      if (letter.length === currentText.length) {
+        setTimeout(() => {
+          index = 0;
+          count++;
+          type();
+        }, 2000);
+      } else {
+        setTimeout(type, 100);
+      }
+    }
+    type();
+  }
+
+// CV Preview iframe - optional: reload on button click to refresh CV
+const cvBtn = document.querySelector('.btn-cv-download');
+if(cvBtn) {
+  cvBtn.addEventListener('click', () => {
+    const iframe = document.querySelector('iframe');
+    if(iframe) {
+      iframe.src = '/download-cv';
+    }
+  });
+}
