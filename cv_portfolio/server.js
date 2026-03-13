@@ -3,7 +3,6 @@ const path = require("path");
 const PDFDocument = require("pdfkit");
 
 const app = express();
-const PORT = 3000;
 
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
@@ -151,7 +150,11 @@ app.get("/download-cv", (req, res) => {
 });
 
 
-// START SERVER
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
