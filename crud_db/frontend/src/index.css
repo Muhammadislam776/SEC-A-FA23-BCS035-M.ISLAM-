@@ -1,0 +1,200 @@
+/* GLOBAL */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  color: white;
+}
+
+/* DATABASE PAGE */
+
+.db-selection{
+  text-align: center;
+  padding-top: 80px;
+}
+
+.db-selection h1{
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* BUTTON CONTAINER */
+
+.db-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* DATABASE CARDS */
+
+.db-buttons button{
+
+  width: 220px;
+  height: 150px;
+
+  border: none;
+  border-radius: 16px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  color: white;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+/* MYSQL */
+
+.db-buttons button:nth-child(1){
+  background: linear-gradient(135deg,#007bff,#0056b3);
+}
+
+/* SQLITE */
+
+.db-buttons button:nth-child(2){
+  background: linear-gradient(135deg,#28a745,#1e7e34);
+}
+
+/* MONGODB */
+
+.db-buttons button:nth-child(3){
+  background: linear-gradient(135deg,#ffc107,#d39e00);
+  color:black;
+}
+
+/* HOVER EFFECT */
+
+.db-buttons button:hover{
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+}
+
+/* CRUD PAGE */
+
+.crud-container{
+  width: 80%;
+  margin:auto;
+  margin-top:50px;
+  text-align:center;
+}
+
+.page-title{
+  font-size:36px;
+  margin-bottom:30px;
+}
+
+/* FORM */
+
+.item-form{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.item-form input{
+
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  width:200px;
+
+}
+
+.item-form button{
+
+  background:#17a2b8;
+  border:none;
+  padding:12px 20px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+
+}
+
+/* ITEMS GRID */
+
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+
+.item-card{
+
+  background:white;
+  color:black;
+
+  padding:20px;
+
+  border-radius:12px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+/* PRICE */
+
+.price{
+  font-weight:bold;
+  color:green;
+}
+
+/* BUTTONS */
+
+.item-actions{
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.edit-btn{
+  background:#ffc107;
+  border:none;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.delete-btn{
+  background:#dc3545;
+  border:none;
+  padding:8px 14px;
+  border-radius:6px;
+  color:white;
+  cursor:pointer;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+
+  position:absolute;
+  top:20px;
+  left:20px;
+
+  background:#343a40;
+  color:white;
+
+  border:none;
+  padding:10px 15px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+}
